@@ -7,7 +7,7 @@
     <style>
         :root {
             --border-menu: #98A3AE7A;
-            --text: #363E45;
+            --text: black;
         }
 
         .pic-logo {
@@ -137,7 +137,7 @@
         }
 
         .text-big {
-            color: #363E45;
+            color: black;
             font-variant-numeric: lining-nums proportional-nums;
             font-family: JetBrains Mono;
             font-size: 20px;
@@ -156,6 +156,14 @@
             font-weight: 400;
             line-height: 16px;
         }
+
+        .footer-links a {
+            text-decoration: none;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+
 
         .educations-table {
             display: grid;
@@ -182,7 +190,7 @@
         }
 
         .text-subheader {
-            color: rgba(54, 62, 69, 0.64);
+            color: black;
             font-variant-numeric: lining-nums proportional-nums;
             font-family: JetBrains Mono;
             font-size: 16px;
@@ -194,7 +202,7 @@
         .text-year {
             white-space: pre-line;
 
-            color: #363E45;
+            color: black;
             font-variant-numeric: lining-nums proportional-nums;
             font-family: JetBrains Mono;
             font-size: 16px;
@@ -300,7 +308,7 @@
 <body>
 <div class="Content">
     <header class="menu" id='screen1'>
-        <img class="pic-logo pic" style="height: 40px; width: 40px"/>
+        <img class="pic-logo pic" style="height: 40px; width: 40px" alt="Логотип"/>
         <div class="btns-group">
             <div class="btn">Education</div>
             <div class="btn">Personality</div>
@@ -313,7 +321,7 @@
             My name is Ekaterina Ryazanova
             I'm just a student
         </div>
-        <img class="pic-img2" style="width: 358px;height: 358px;flex-shrink: 0; background-color: black"/>
+        <img class="pic-img2" style="width: 358px;height: 358px;flex-shrink: 0; background-color: black" alt="pic"/>
     </div>
 
     <div class="block" id='screen3'>
@@ -426,21 +434,21 @@
         <div class="text-very-big" style="line-height: 48px">Contacts</div>
         <div class="col" style="gap:16px">
             <div class="info-box">
-                <img class="pic pic-pin"/>
+                <img class="pic pic-pin" alt="Иконка адреса"/>
                 <div class="header">
                     <div class="text-big">Address</div>
                     <div class="text-subheader">5-7 Vyazemsky Lane, Saint-Petersburg</div>
                 </div>
             </div>
             <div class="info-box">
-                <img class="pic pic-phone"/>
+                <img class="pic pic-phone" alt="Иконка тф"/>
                 <div class="header">
                     <div class="text-big">Phone</div>
                     <div class="text-subheader">+8 (800) 555 35 35</div>
                 </div>
             </div>
             <div class="info-box">
-                <img class="pic pic-mail"/>
+                <img class="pic pic-mail" alt="Иконка почты"/>
                 <div class="header">
                     <div class="text-big">E-Mail</div>
                     <div class="text-subheader">kkkkkkkkkk042004@inbox.ru</div>
@@ -451,14 +459,34 @@
 
     <div class="footer" id='screen7'>
         <div class="footer-links">
-            <img class="logo-small pic-instagram"/>
-            <img class="logo-small pic-github"/>
-            <img class="logo-small pic-twitter"/>
-            <img class="logo-small pic-linkedin"/>
+            <a href="https://instagram.com" target="_blank" class="logo-small pic-instagram">
+                <img class="pic pic-instagram" alt="Instagram Icon" />
+            </a>
+            <a href="https://github.com" target="_blank" class="logo-small pic-github">
+                <img class="pic pic-github" alt="GitHub Icon" />
+            </a>
+            <a href="https://twitter.com" target="_blank" class="logo-small pic-twitter">
+                <img class="pic pic-twitter" alt="Twitter Icon" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="logo-small pic-linkedin">
+                <img class="pic pic-linkedin" alt="LinkedIn Icon" />
+            </a>
         </div>
-        <div class="text-small" style="line-height: normal; color:rgba(54, 62, 69, 0.64)">&copy; 2023</div>
+
+        <div class="text-small" style="line-height: normal; color:black">&copy; 2023</div>
     </div>
 </div>
-</div>
+<script>
+    document.querySelectorAll('iframe').forEach((iframe, index) => {
+        if (!iframe.title) {
+            iframe.title = `Embedded frame ${index + 1}`;
+        }
+    });
+    document.querySelectorAll('frame').forEach((frame, index) => {
+        if (!frame.title) {
+            frame.title = `Embedded frame ${index + 1}`;
+        }
+    });
+</script>
 </body>
 </html>
